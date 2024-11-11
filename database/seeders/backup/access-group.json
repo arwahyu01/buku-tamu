@@ -15,7 +15,9 @@
             "user",
             "question",
             "hidden-menu",
-            "notification"
+            "notification",
+            "unor",
+            "tamu"
         ]
     },
     {
@@ -29,7 +31,9 @@
             "user",
             "question",
             "hidden-menu",
-            "notification"
+            "notification",
+            "unor",
+            "tamu"
         ]
     },
     {
@@ -39,7 +43,8 @@
         "menu": [
             "user",
             "hidden-menu",
-            "notification"
+            "notification",
+            "tamu"
         ]
     }
 ]

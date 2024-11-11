@@ -9,7 +9,7 @@
         "type": "backend",
         "show": false,
         "active": true,
-        "sort": 4,
+        "sort": 6,
         "coming_soon": 0,
         "maintenance": 0,
         "children": []
@@ -24,7 +24,7 @@
         "type": "backend",
         "show": true,
         "active": true,
-        "sort": 2,
+        "sort": 4,
         "coming_soon": 0,
         "maintenance": 0,
         "children": [
@@ -145,7 +145,7 @@
         "type": "backend",
         "show": true,
         "active": true,
-        "sort": 3,
+        "sort": 5,
         "coming_soon": 0,
         "maintenance": 0,
         "children": []
@@ -160,7 +160,7 @@
         "type": "backend",
         "show": false,
         "active": true,
-        "sort": 5,
+        "sort": 7,
         "coming_soon": 0,
         "maintenance": 0,
         "children": [
@@ -180,5 +180,35 @@
                 "children": []
             }
         ]
+    },
+    {
+        "title": "Unor",
+        "subtitle": "Unit Organisasi",
+        "code": "unor",
+        "model": "Unor",
+        "url": "unor",
+        "icon": "fa fa-building",
+        "type": "backend",
+        "show": true,
+        "active": true,
+        "sort": 3,
+        "coming_soon": 0,
+        "maintenance": 0,
+        "children": []
+    },
+    {
+        "title": "Tamu",
+        "subtitle": "Biodata Tamu",
+        "code": "tamu",
+        "model": "Tamu",
+        "url": "tamu",
+        "icon": "fa fa-users",
+        "type": "backend",
+        "show": true,
+        "active": true,
+        "sort": 2,
+        "coming_soon": 0,
+        "maintenance": 0,
+        "children": []
     }
 ]

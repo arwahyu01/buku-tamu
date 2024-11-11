@@ -213,5 +213,55 @@
             "update",
             "delete"
         ]
+    },
+    {
+        "access_group_code": "root",
+        "code_menu": "unor",
+        "access": [
+            "read",
+            "create",
+            "update",
+            "delete"
+        ]
+    },
+    {
+        "access_group_code": "admin",
+        "code_menu": "unor",
+        "access": [
+            "read",
+            "create",
+            "update",
+            "delete"
+        ]
+    },
+    {
+        "access_group_code": "root",
+        "code_menu": "tamu",
+        "access": [
+            "read",
+            "create",
+            "update",
+            "delete"
+        ]
+    },
+    {
+        "access_group_code": "admin",
+        "code_menu": "tamu",
+        "access": [
+            "read",
+            "create",
+            "update",
+            "delete"
+        ]
+    },
+    {
+        "access_group_code": "user",
+        "code_menu": "tamu",
+        "access": [
+            "read",
+            "create",
+            "update",
+            "delete"
+        ]
     }
 ]
