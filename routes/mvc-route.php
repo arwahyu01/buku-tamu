@@ -13,6 +13,7 @@ Route::group(['prefix'=>config('mvc.route_prefix')], function () { // remove thi
 		Route::prefix('tamu')->as('tamu')->group(function () {
 			Route::get('data', 'Tamu\TamuController@data');
 			Route::get('delete/{id}', 'Tamu\TamuController@delete');
+			Route::get('total-tamu', 'Tamu\TamuController@totalTamu');
 		});
 		Route::resource('tamu', 'Tamu\TamuController');
 		//end-tamu

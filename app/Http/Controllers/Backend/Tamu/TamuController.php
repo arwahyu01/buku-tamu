@@ -141,4 +141,22 @@ class TamuController extends Controller
         }
         return $res ?? [];
     }
+
+    public function totalTamu()
+    {
+        $tamu = (new $this->model);
+        return response()->json([
+            'status' => 'success',
+            'code' => 200,
+            'message' => 'Data berhasil diambil',
+            'data' => [
+                'tamu' => [
+                    'hari_ini' => $tamu->hari_ini,
+                    'bulan_ini' => $tamu->bulan_ini,
+                    'tahun_ini' => $tamu->tahun_ini,
+                    'total' => $tamu->total_tamu,
+                ],
+            ],
+        ]);
+    }
 }

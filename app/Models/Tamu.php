@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Str;
 
 class Tamu extends Model
 {
@@ -23,5 +24,30 @@ class Tamu extends Model
     public function file() : object
     {
         return $this->morphOne(File::class, 'fileable');
+    }
+
+    public function GetHariIniAttribute() : int
+    {
+        return $this->whereDate('created_at', now())->count();
+    }
+
+    public function GetBulanIniAttribute() : int
+    {
+        return $this->whereMonth('created_at', now())->count();
+    }
+
+    public function GetTahunIniAttribute() : int
+    {
+        return $this->whereYear('created_at', now())->count();
+    }
+
+    public function GetTotalTamuAttribute() : int
+    {
+        return $this->count();
+    }
+
+    public function SetNikAttribute($value) : void
+    {
+        $this->attributes['nik'] = Str::of($value)->replace(' ', '');
     }
 }

@@ -27,25 +27,25 @@
                     <div class="col-md-3">
                         <div class="box bg-primary-light overflow-hidden pull-up text-center">
                             <h1 class="fs-20">Hari Ini</h1>
-                            <p class="text-dark fs-40">20</p>
+                            <p class="text-dark fs-40 hari-ini">20</p>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="box bg-primary-light overflow-hidden pull-up text-center">
                             <h1 class="fs-20">Bulan Ini</h1>
-                            <p class="text-dark fs-40">20</p>
+                            <p class="text-dark fs-40 bulan-ini">20</p>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="box bg-primary-light overflow-hidden pull-up text-center">
                             <h1 class="fs-20">Tahun Ini</h1>
-                            <p class="text-dark fs-40">20</p>
+                            <p class="text-dark fs-40 tahun-ini">20</p>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="box bg-primary-light overflow-hidden pull-up text-center">
                             <h1 class="fs-20">Total</h1>
-                            <p class="text-dark fs-40">20</p>
+                            <p class="text-dark fs-40 total-tamu">20</p>
                         </div>
                     </div>
                 </div>
@@ -60,5 +60,21 @@
     </div>
 @endsection
 @push('js')
-
+<script>
+    $.ajax({
+        url: "{{ url(config('master.app.url.backend').'/tamu/total-tamu') }}",
+        method: 'GET',
+        success: function (res) {
+            if(res.status === 'success') {
+                $('.hari-ini').html(res.data.tamu.hari_ini);
+                $('.bulan-ini').html(res.data.tamu.bulan_ini);
+                $('.tahun-ini').html(res.data.tamu.tahun_ini);
+                $('.total-tamu').html(res.data.tamu.total);
+            }
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    });
+</script>
 @endpush
